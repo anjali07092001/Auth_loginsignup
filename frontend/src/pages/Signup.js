@@ -36,7 +36,7 @@ function Signup() {
     console.log('Frontend: Data being sent for signup:', loginInfo);
 
     try {
-      const response = await fetch('http://localhost:5000/api/signup', {
+      const response = await fetch('https://auth-loginsignup-api.vercel.app/api/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
