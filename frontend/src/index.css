@@ -1,0 +1,112 @@
+/* Universal Styles: A clean slate for all elements */
+*,
+::before,
+::after {
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+  padding: 0;             /* Removes default inner spacing */
+  margin: 0;              /* Removes default outer spacing */
+}
+
+/* Base Typography: Setting a default font for readability */
+label {
+  font-size: 20px;
+}
+
+/* HTML & Body: Ensuring full viewport coverage and centering content */
+html,
+body {
+  height: 100%; /* Makes sure body and html take full height of the viewport */
+  width: 100%;  /* Makes sure body and html take full width of the viewport */
+}
+
+body {
+  display: flex;                /* Enables Flexbox for easy centering */
+  justify-content: center;      /* Horizontally centers content */
+  align-items: center;          /* Vertically centers content */
+  font-family: sans-serif;      /* Uses a common sans-serif font for readability */
+  background-color: #f0f2f5;    /* A soft, light background color for the page */
+}
+
+/* Container Styling: The main card for your form */
+.Container {
+  background-color: antiquewhite; /* A warm, light background for the form card */
+  padding: 32px 48px;             /* Generous inner spacing (top/bottom 32px, left/right 48px) */
+  border-radius: 10px;            /* Gently rounded corners for a modern look */
+  max-width: 400px;               /* Limits the maximum width of the container */
+  width: 90%;                     /* Makes the container responsive, taking 90% width on smaller screens */
+  box-shadow: 0 8px 24px rgba(66, 68, 98, 0.3); /* A soft, subtle shadow for depth */
+}
+
+/* Heading within the Container */
+.Container h1 {
+  margin-bottom: 20px;    /* Space below the heading */
+  text-align: center;     /* Centers the text of the heading */
+  color: #333;            /* A dark grey for good contrast */
+}
+
+/* Form Layout: Arranging form elements vertically */
+.Container form {
+  display: flex;            /* Enables Flexbox for the form */
+  flex-direction: column;   /* Stacks form elements vertically */
+  gap: 15px;                /* Provides consistent spacing between form elements */
+}
+
+/* Input Fields: Consistent styling for all text inputs */
+.Container input {
+  width: 100%;            /* Makes inputs fill the full width of their parent */
+  font-size: 18px;        /* Comfortable font size for input text */
+  padding: 10px;          /* Inner spacing within the input field */
+  border: 1px solid #ccc; /* A light grey border for definition */
+  border-radius: 5px;     /* Slightly rounded corners for inputs */
+  outline: none;          /* Removes the default blue outline on focus */
+}
+
+/* Input Focus State: Visual feedback when an input is active */
+.Container input:focus {
+  border-color: #6a0dad; /* Changes border color to purple on focus */
+  box-shadow: 0 0 0 2px rgba(106, 13, 173, 0.2); /* Adds a subtle purple glow on focus */
+}
+
+/* Placeholder Text: Styling for the hint text inside inputs */
+.Container input::placeholder {
+  font-size: 14px;        /* Slightly smaller font for placeholders */
+  font-style: italic;     /* Italicized placeholder text */
+  color: #888;            /* A softer grey color for placeholders */
+}
+
+/* Button Styling: Your call to action */
+button {
+  background-color: purple;     /* A vibrant purple background */
+  border: none;                 /* Removes default border */
+  font-size: 20px;              /* Clear, readable text size */
+  color: whitesmoke;            /* White text for contrast */
+  border-radius: 5px;           /* Rounded corners for the button */
+  padding: 10px;                /* Inner spacing within the button */
+  cursor: pointer;              /* Indicates it's clickable */
+  margin: 10px 0;               /* Vertical margin for spacing around the button */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  width: 100%;                  /* Button fills the container width */
+}
+
+/* Button Hover Effect: Visual feedback when hovering over the button */
+button:hover {
+  background-color: #0dad9d; /* A slightly darker shade of purple on hover */
+}
+
+/* Account Link Section: For "Already have an account?" text */
+.Container span {
+  text-align: center; /* Centers the text */
+  margin-top: 10px;   /* Space above the link text */
+  font-size: 14px;    /* Smaller font size for this text */
+}
+
+.Container span a {
+  color: purple;          /* Sets the link color to purple */
+  text-decoration: none;  /* Removes the default underline */
+  font-weight: bold;      /* Makes the link text bolder */
+}
+
+/* Link Hover Effect: Visual feedback when hovering over the link */
+.Container span a:hover {
+  text-decoration: underline; /* Underlines the link on hover */
+}
